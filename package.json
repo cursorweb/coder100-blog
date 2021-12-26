@@ -5,9 +5,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "new": "node util/new-page"
   },
   "dependencies": {
+    "gray-matter": "^4.0.3",
     "next": "12.0.7",
     "react": "17.0.2",
     "react-dom": "17.0.2"
