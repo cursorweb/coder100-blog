@@ -17,7 +17,7 @@ const postsDirectory = path.join(process.cwd(), 'posts')
 export function getBlogs() {
   const files = fs.readdirSync(postsDirectory)
   const data = files.map(file => {
-    const title = file.replace(/\.md$/, '')
+    const url = file.replace(/\.md$/, '')
 
     const filePath = path.join(postsDirectory, file)
     const fileContents = fs.readFileSync(filePath, 'utf8')
@@ -25,7 +25,7 @@ export function getBlogs() {
     const matterResult = matter(fileContents)
 
     return {
-      title,
+      url,
       ...matterResult.data
     }
   })
