@@ -1,0 +1,19 @@
+.flex {
+  display: flex;
+  padding: 10px;
+  background: #eee;
+  height: 100vh;
+}
+
+.main {
+  flex: 75%;
+  background: #fff;
+  padding: 10px;
+  margin: 10px;
+}
+
+.sub {
+  flex: 25%;
+  padding: 10px;
+  margin: 10px;
+}
