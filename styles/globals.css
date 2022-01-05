@@ -33,3 +33,7 @@ a {
 p {
   margin: 8px;
 }
+
+.big {
+  font-size: 3rem;
+}
