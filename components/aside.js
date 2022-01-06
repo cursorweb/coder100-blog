@@ -17,6 +17,9 @@ export function Aside({ className }) {
   }, {
     name: 'Twitter',
     link: 'https://twitter.com/Coder1002'
+  }, {
+    name: 'Itch.io',
+    link: 'https://cursorgames.itch.io/'
   }]
 
   return (
