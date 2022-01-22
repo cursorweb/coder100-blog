@@ -1,4 +1,15 @@
 .nav {
+  padding: 0;
+  background: blue;
+}
+
+.link {
+  background: rgba(255, 255, 255, 0.5);
+  transition: all 0.2s;
   padding: 8px;
-  background: orange;
+  display: inline-block;
+}
+
+.link:hover {
+  background: rgba(255, 255, 255, 0.9);
 }
