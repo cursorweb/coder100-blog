@@ -4,7 +4,7 @@ import { Card } from '../components/card'
 import { Layout } from '../components/blog/layout'
 
 
-import { getBlogs } from './lib/posts'
+import { getBlogs } from '../lib/posts'
 
 
 export default function Home({ blogs }) {

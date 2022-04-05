@@ -1,6 +1,6 @@
 import Head from 'next/head'
 
-import { getPaths, getBlog } from '../lib/posts'
+import { getPaths, getBlog } from '../../lib/posts'
 
 import styles from '../../styles/Blog.module.css'
 import { Layout } from '../../components/blog/layout'
