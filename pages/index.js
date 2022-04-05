@@ -1,8 +1,8 @@
-import Head from 'next/head'
-import Link from 'next/link'
+import Head from "next/head";
+import Link from "next/link";
 
-import { Meta } from '../components/meta'
-import { Nav } from '../components/nav'
+import { Meta } from "../components/meta";
+import { Nav } from "../components/nav";
 
 
 export default function Home({ blogs }) {
@@ -19,5 +19,5 @@ export default function Home({ blogs }) {
         </Link>
       </>
     </div>
-  )
+  );
 }

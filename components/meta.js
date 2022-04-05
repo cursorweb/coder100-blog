@@ -1,4 +1,4 @@
-import Head from 'next/head'
+import Head from "next/head";
 
 
 export function Meta({ title }) {
@@ -17,5 +17,5 @@ export function Meta({ title }) {
       <meta name="msapplication-config" content="/favicons/browserconfig.xml" />
       <meta name="theme-color" content="#ffffff" />
     </Head>
-  )
+  );
 }

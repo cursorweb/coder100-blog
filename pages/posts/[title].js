@@ -1,26 +1,26 @@
-import Head from 'next/head'
+import Head from "next/head";
 
-import { getPaths, getBlog } from '../../lib/posts'
+import { getPaths, getBlog } from "../../lib/posts";
 
-import styles from '../../styles/Blog.module.css'
-import { Layout } from '../../components/blog/layout'
+import styles from "../../styles/Blog.module.css";
+import { Layout } from "../../components/blog/layout";
 
 
 export async function getStaticPaths() {
-  const paths = getPaths()
+  const paths = getPaths();
   return {
     paths,
     fallback: false
-  }
+  };
 }
 
 export async function getStaticProps({ params }) {
-  const data = getBlog(params.title)
+  const data = getBlog(params.title);
   return {
     props: {
       data
     }
-  }
+  };
 }
 
 export default function Post({ data }) {
@@ -37,5 +37,5 @@ export default function Post({ data }) {
         <div dangerouslySetInnerHTML={{ __html: data.html }} />
       </Layout>
     </>
-  )
+  );
 }

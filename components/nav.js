@@ -1,5 +1,5 @@
-import Link from 'next/link'
-import styles from './nav.module.css'
+import Link from "next/link";
+import styles from "./nav.module.css";
 
 export function Nav() {
   return (
@@ -8,5 +8,5 @@ export function Nav() {
         <a className={styles.link}>Coder100</a>
       </Link>
     </nav>
-  )
+  );
 }

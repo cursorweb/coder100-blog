@@ -1,10 +1,10 @@
-import Head from 'next/head'
+import Head from "next/head";
 
-import { Card } from '../components/card'
-import { Layout } from '../components/blog/layout'
+import { Card } from "../components/card";
+import { Layout } from "../components/blog/layout";
 
 
-import { getBlogs } from '../lib/posts'
+import { getBlogs } from "../lib/posts";
 
 
 export default function Home({ blogs }) {
@@ -27,16 +27,16 @@ export default function Home({ blogs }) {
         ))}
       </Layout>
     </div>
-  )
+  );
 }
 
 
 export function getStaticProps() {
-  const blogs = getBlogs()
+  const blogs = getBlogs();
 
   return {
     props: {
       blogs
     }
-  }
+  };
 }

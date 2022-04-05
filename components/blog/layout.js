@@ -1,7 +1,7 @@
-import { Aside } from '../aside'
-import { Nav } from '../nav'
+import { Aside } from "../aside";
+import { Nav } from "../nav";
 
-import styles from './layout.module.css'
+import styles from "./layout.module.css";
 
 
 export function Layout({ children }) {
@@ -15,5 +15,5 @@ export function Layout({ children }) {
         <Aside className={styles.sub} />
       </main>
     </>
-  )
+  );
 }
