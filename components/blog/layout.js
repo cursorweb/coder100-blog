@@ -1,5 +1,5 @@
-import { Aside } from './aside'
-import { Nav } from './nav'
+import { Aside } from '../aside'
+import { Nav } from '../nav'
 
 import styles from './layout.module.css'
 

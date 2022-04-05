@@ -5,7 +5,7 @@ export function Nav() {
   return (
     <nav className={styles.nav}>
       <Link href="/">
-        <a className={styles.link}>Coder100&apos;s Blog</a>
+        <a className={styles.link}>Coder100</a>
       </Link>
     </nav>
   )

@@ -1,42 +1,23 @@
 import Head from 'next/head'
+import Link from 'next/link'
 
-import { Card } from '../components/card'
-import { Layout } from '../components/layout'
-
-
-import { getBlogs } from './lib/posts'
+import { Meta } from '../components/meta'
+import { Nav } from '../components/nav'
 
 
 export default function Home({ blogs }) {
   // todo: make this a new component called layout
   return (
     <div>
-      <Head>
-        {/* eslint-disable-next-line */}
-        <title>Coder100's Blog</title>
-      </Head>
+      <Meta title="Coder100" />
 
-      <Layout>
-        <div className="title">Coder100&apos;s Blog</div>
-        <p>Welcome to my blog! Click around and read my blog posts! I&apos;m an avid coder, youtuber, and a musician. Happy reading!</p>
-        {blogs.map(({ url, title, bio, date }, i) => (
-          <Card key={i} title={title} href={`/posts/${url}`}>
-            <div className="small-sub">{new Date(date).toDateString()}</div>
-            <div>{bio}</div>
-          </Card>
-        ))}
-      </Layout>
+      <>
+        <Nav />
+        <h1>Coder100&apos;s Website</h1>
+        <Link href="/blog">
+          <a>To Blog</a>
+        </Link>
+      </>
     </div>
   )
-}
-
-
-export function getStaticProps() {
-  const blogs = getBlogs()
-
-  return {
-    props: {
-      blogs
-    }
-  }
 }

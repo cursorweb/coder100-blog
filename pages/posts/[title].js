@@ -1,11 +1,9 @@
-import Link from 'next/link'
 import Head from 'next/head'
 
 import { getPaths, getBlog } from '../lib/posts'
 
-import styles from '../../styles/Home.module.css'
-import { Aside } from '../../components/aside'
-import { Layout } from '../../components/layout'
+import styles from '../../styles/Blog.module.css'
+import { Layout } from '../../components/blog/layout'
 
 
 export async function getStaticPaths() {
