@@ -1,4 +1,4 @@
-import Head from "next/head";
+import { Meta } from "../../components/meta";
 
 import { getPaths, getBlog } from "../../lib/posts";
 
@@ -26,9 +26,7 @@ export async function getStaticProps({ params }) {
 export default function Post({ data }) {
   return (
     <>
-      <Head>
-        <title>{data.title}</title>
-      </Head>
+      <Meta title={data.title} />
       <Layout>
         <aside className={styles.top}>
           <div className="big">{data.title}</div>

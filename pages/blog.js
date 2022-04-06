@@ -1,4 +1,4 @@
-import Head from "next/head";
+import { Meta } from "../components/meta";
 
 import { Card } from "../components/card";
 import { Layout } from "../components/blog/layout";
@@ -10,11 +10,8 @@ import { getBlogs } from "../lib/posts";
 export default function Home({ blogs }) {
   // todo: make this a new component called layout
   return (
-    <div>
-      <Head>
-        {/* eslint-disable-next-line */}
-        <title>Coder100's Blog</title>
-      </Head>
+    <>
+      <Meta title="Coder100's Blog" />
 
       <Layout>
         <div className="title">Coder100&apos;s Blog</div>
@@ -26,7 +23,7 @@ export default function Home({ blogs }) {
           </Card>
         ))}
       </Layout>
-    </div>
+    </>
   );
 }
 
