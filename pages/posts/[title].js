@@ -26,7 +26,7 @@ export async function getStaticProps({ params }) {
 export default function Post({ data }) {
   return (
     <>
-      <Meta title={data.title} />
+      <Meta title={data.title} desc={data.bio} />
       <Layout>
         <aside className={styles.top}>
           <div className="big">{data.title}</div>
