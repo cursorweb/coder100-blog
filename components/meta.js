@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-// todo: make this based on env
+
 export function Meta({ title, desc = "The personal homepage of Coder100" }) {
   return (
     <Head>
@@ -14,14 +14,14 @@ export function Meta({ title, desc = "The personal homepage of Coder100" }) {
       <meta property="og:url" content={"https://coder100.vercel.app"} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={desc} />
-      <meta property="og:image" content="2:1thing" />
+      <meta property="og:image" content="https://coder100.vercel.app/banner.png" />
 
       {/* Twitter */}
       <meta property="twitter:card" content="summary_large_image" />
       <meta property="twitter:url" content={"https://coder100.vercel.app/"} />
       <meta property="twitter:title" content={title} />
       <meta property="twitter:description" content={desc} />
-      <meta property="twitter:image" content="2:1thing" />
+      <meta property="twitter:image" content="https://coder100.vercel.app/banner.png" />
 
       {/* favicons */}
       <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
