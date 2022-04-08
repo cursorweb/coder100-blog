@@ -1,5 +1,6 @@
 import Head from "next/head";
 
+// todo: make this based on env
 export function Meta({ title, desc = "The personal homepage of Coder100" }) {
   return (
     <Head>
@@ -10,14 +11,14 @@ export function Meta({ title, desc = "The personal homepage of Coder100" }) {
 
       {/* Open Graph / Facebook */}
       <meta property="og:type" content="website" />
-      <meta property="og:url" content={"https://coder100.is-a.dev/"} />
+      <meta property="og:url" content={"https://coder100.vercel.app"} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={desc} />
       <meta property="og:image" content="2:1thing" />
 
       {/* Twitter */}
       <meta property="twitter:card" content="summary_large_image" />
-      <meta property="twitter:url" content={"https://coder100.is-a.dev/"} />
+      <meta property="twitter:url" content={"https://coder100.vercel.app/"} />
       <meta property="twitter:title" content={title} />
       <meta property="twitter:description" content={desc} />
       <meta property="twitter:image" content="2:1thing" />

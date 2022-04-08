@@ -1,19 +1,30 @@
-html,
-body {
+:root {
+  --primary: #006eff;
+  --primaryh: #0053c1;
+
+  --primary-accent: #00098b;
+  --primary-accenth: #000661;
+}
+
+html, body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
+  /* todo */
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+  color: var(--primary);
+  text-decoration: underline;
+  cursor: pointer;
 }
 
-* {
-  box-sizing: border-box;
+a:hover {
+  text-decoration: none;
+  color: var(--primaryh);
 }
+
 
 .title {
   font-weight: bolder;
@@ -28,10 +39,6 @@ a {
 
 .center {
   text-align: center;
-}
-
-p {
-  margin: 8px;
 }
 
 .big {

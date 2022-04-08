@@ -8,6 +8,12 @@
   transition: all 0.2s;
   padding: 8px;
   display: inline-block;
+  text-decoration: none;
+  color: black;
+}
+
+.link:hover {
+  color: black;
 }
 
 .link:hover {
