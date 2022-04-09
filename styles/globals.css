@@ -1,9 +1,14 @@
 :root {
-  --primary: #006eff;
-  --primaryh: #0053c1;
+  --background: #2e3144;
+  --background-accent: #474740;
 
-  --primary-accent: #00098b;
-  --primary-accenth: #000661;
+  --primary: #0095ff;
+  --primaryh: #005999;
+
+  --secondary: #0753b0;
+  --secondaryh: #053b7c;
+
+  --text: #d7ddec;
 }
 
 html, body {
@@ -11,7 +16,7 @@ html, body {
   margin: 0;
 
   /* todo */
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Noto Sans', monospace;
 }
 
 a {
