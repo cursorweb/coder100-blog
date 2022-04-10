@@ -1,6 +1,6 @@
 .card {
   padding: 10px;
-  background: #fff;
+  background: var(--background-accent);
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
   margin: 20px 10px;
 }

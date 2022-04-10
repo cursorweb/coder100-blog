@@ -1,14 +1,12 @@
 .flex {
   display: flex;
   padding: 10px;
-  background: #eee;
   height: 100%;
   overflow: auto;
 }
 
 .main {
   flex: 75%;
-  background: #fff;
   padding: 10px;
   margin: 10px;
   height: 100%;

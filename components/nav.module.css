@@ -1,6 +1,6 @@
 .nav {
   padding: 0;
-  background: blue;
+  background: var(--background-accent);
 }
 
 .link {

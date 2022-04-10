@@ -5,6 +5,7 @@ import { Layout } from "../components/blog/layout";
 
 
 import { getBlogs } from "../lib/posts";
+import "../styles/BlogHome.module.css";
 
 
 export default function Home({ blogs }) {

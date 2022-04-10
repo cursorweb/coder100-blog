@@ -1,22 +1,26 @@
 :root {
-  --background: #2e3144;
-  --background-accent: #474740;
+  --background: #1f212e;
+  --background-accent: #35384b;
 
   --primary: #0095ff;
-  --primaryh: #005999;
+  --primaryh: #7cc9ff;
 
-  --secondary: #0753b0;
-  --secondaryh: #053b7c;
+  --secondary: #064ea5;
+  --secondaryh: #0a5ec6;
 
   --text: #d7ddec;
+
+  --font: 'Noto Sans', monospace;
 }
 
 html, body {
   padding: 0;
   margin: 0;
 
-  /* todo */
-  font-family: 'Noto Sans', monospace;
+  background: var(--background);
+  color: var(--text);
+
+  font-family: var(--font);
 }
 
 a {

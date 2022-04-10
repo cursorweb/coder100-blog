@@ -1,13 +1,11 @@
 .flex {
   display: flex;
   padding: 10px;
-  background: #eee;
   height: 100%;
 }
 
 .main {
   flex: 75%;
-  background: #fff;
   padding: 10px;
   margin: 10px;
 }
@@ -19,7 +17,6 @@
 }
 
 .horiz {
-  background: #eee;
   display: flex;
   flex-direction: column;
   height: 100vh;

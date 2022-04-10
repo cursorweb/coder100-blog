@@ -1,4 +1,4 @@
 .aside {
-  background: blue;
+  background: var(--background-accent);
   overflow: auto;
 }
