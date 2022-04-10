@@ -34,6 +34,31 @@ a:hover {
   color: var(--primaryh);
 }
 
+code {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 4px;
+  border-radius: 8px;
+  display: inline;
+}
+
+pre code {
+  display: block;
+  padding: 10px;
+}
+
+
+
+::selection {
+  color: white;
+  background: var(--secondaryh);
+}
+
+::-moz-selection {
+  color: white;
+  background: var(--secondaryh);
+}
+
+
 
 .title {
   font-weight: bolder;
