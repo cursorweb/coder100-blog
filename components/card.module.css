@@ -1,6 +1,10 @@
 .card {
   padding: 10px;
   background: var(--background-accent);
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
-  margin: 20px 10px;
+  /* box-shadow: 0 0 4px rgba(0, 0, 0, 0.5); */
+  margin: 20px 0px;
+}
+
+.header {
+  text-decoration: none;
 }

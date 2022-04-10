@@ -1,6 +1,7 @@
 .nav {
   padding: 0;
   background: var(--background-accent);
+  display: flex;
 }
 
 .link {

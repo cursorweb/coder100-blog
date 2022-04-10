@@ -5,7 +5,7 @@ import { Layout } from "../components/blog/layout";
 
 
 import { getBlogs } from "../lib/posts";
-import "../styles/BlogHome.module.css";
+import styles from "../styles/BlogHome.module.css";
 
 
 export default function Home({ blogs }) {
@@ -19,7 +19,7 @@ export default function Home({ blogs }) {
         <p>Welcome to my blog! Click around and read my blog posts! I&apos;m an avid coder, youtuber, and a musician. Happy reading!</p>
         {blogs.map(({ url, title, bio, date }, i) => (
           <Card key={i} title={title} href={`/posts/${url}`}>
-            <div className="small-sub">{new Date(date).toDateString()}</div>
+            <div className={styles.smallSub}>{new Date(date).toDateString()}</div>
             <div>{bio}</div>
           </Card>
         ))}
