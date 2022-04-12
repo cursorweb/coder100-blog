@@ -49,12 +49,12 @@ pre code {
 
 ::selection {
   color: white;
-  background: var(--secondaryh);
+  background: var(--primaryh);
 }
 
 ::-moz-selection {
   color: white;
-  background: var(--secondaryh);
+  background: var(--primaryh);
 }
 
 
