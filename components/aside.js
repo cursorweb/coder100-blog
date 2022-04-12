@@ -1,7 +1,9 @@
 import Link from "next/link";
 
 import { Card, CardTitle } from "./card";
+
 import styles from "./aside.module.css";
+
 
 export function Aside({ className }) {
   const links = [{
@@ -26,7 +28,7 @@ export function Aside({ className }) {
 
   return (
     <aside className={`${className ?? ""} ${styles.aside}`}>
-      <div className="title">Links</div>
+      <div className={styles.subtitle}>Links</div>
       {links.map(({ name, link }, i) =>
         <Card key={i} className={styles.customCard}>
           <CardTitle center className={styles.customTitle}>

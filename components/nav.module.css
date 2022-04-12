@@ -10,6 +10,10 @@
   display: inline-block;
   text-decoration: none;
   color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .link:hover {

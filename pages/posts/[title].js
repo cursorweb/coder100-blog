@@ -29,8 +29,8 @@ export default function Post({ data }) {
       <Meta title={data.title} desc={data.bio} />
       <Layout>
         <aside className={styles.top}>
-          <div className="big">{data.title}</div>
-          <div className="sub">{new Date(data.date).toDateString()}</div>
+          <div className={styles.big}>{data.title}</div>
+          <div className={styles.small}>{new Date(data.date).toDateString()}</div>
         </aside>
         <div dangerouslySetInnerHTML={{ __html: data.html }} />
       </Layout>

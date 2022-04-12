@@ -17,7 +17,7 @@ export default function Home({ blogs }) {
       <Meta title="Coder100's Blog" />
 
       <Layout>
-        <div className="title">Coder100&apos;s Blog</div>
+        <div className={styles.title}>Coder100&apos;s Blog</div>
         <p>Welcome to my blog! Click around and read my blog posts! I&apos;m an avid coder, youtuber, and a musician. Happy reading!</p>
         {blogs.map(({ url, title, bio, date }, i) => (
           <Card key={i}>

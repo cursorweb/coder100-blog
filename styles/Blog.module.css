@@ -1,31 +1,12 @@
-.flex {
-  display: flex;
-  padding: 10px;
-  height: 100%;
-}
-
-.main {
-  flex: 75%;
-  padding: 10px;
-  margin: 10px;
-}
-
-.sub {
-  flex: 25%;
-  padding: 10px;
-  margin: 10px;
-}
-
-.horiz {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-}
-
 .top {
   flex: 1;
 }
 
-.sub {
-  flex: 3;
+.center {
+  text-align: center;
+}
+
+.big {
+  font-size: 3rem;
+  color: var(--primary);
 }
