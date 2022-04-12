@@ -1,4 +1,6 @@
-import { Card } from "./card";
+import Link from "next/link";
+
+import { Card, CardTitle } from "./card";
 import styles from "./aside.module.css";
 
 export function Aside({ className }) {
@@ -25,7 +27,9 @@ export function Aside({ className }) {
   return (
     <aside className={`${className ?? ""} ${styles.aside}`}>
       <div className="title">Links</div>
-      {links.map(({name, link}, i) => <Card href={link} title={`My ${name}!`} key={i} center tab={true} />)}
+      {links.map(({name, link}, i) => <Card key={i}>
+        <CardTitle center={true}><Link href={link}><a target="_blank">{name}</a></Link></CardTitle>
+      </Card>)}
     </aside>
   );
 }

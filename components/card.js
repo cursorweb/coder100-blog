@@ -1,15 +1,19 @@
 import Link from "next/link";
-import Image from "next/image";
+// import Image from "next/image";
 
 import styles from "./card.module.css";
 
-export function Card({ href, src, title, children, center = false, tab = false }) {
+export function Card({ href, title, children, center = false, tab = false }) {
   return (
     <div className={styles.card}>
-      {src ? <Image src={src} alt="Image" />  : ""}
-      <div className={`subtitle ${center ? "center" : ""}`}>
-        <Link href={href}><a target={tab ? "_blank" : "_self"} className={styles.header}>{title}</a></Link>
-      </div>
+      {children}
+    </div>
+  );
+}
+
+export function CardTitle({ children, className=[], center = false }) {
+  return (
+    <div className={[styles.header, center ? styles.center : "" , ...className].join(" ")}>
       {children}
     </div>
   );
