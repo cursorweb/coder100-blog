@@ -27,9 +27,13 @@ export function Aside({ className }) {
   return (
     <aside className={`${className ?? ""} ${styles.aside}`}>
       <div className="title">Links</div>
-      {links.map(({name, link}, i) => <Card key={i}>
-        <CardTitle center={true}><Link href={link}><a target="_blank">{name}</a></Link></CardTitle>
-      </Card>)}
+      {links.map(({ name, link }, i) =>
+        <Card key={i} className={styles.customCard}>
+          <CardTitle center className={styles.customTitle}>
+            <Link href={link}><a target="_blank" className={styles.noUnderline}>{name}</a></Link>
+          </CardTitle>
+        </Card>
+      )}
     </aside>
   );
 }

@@ -3,17 +3,17 @@ import Link from "next/link";
 
 import styles from "./card.module.css";
 
-export function Card({ href, title, children, center = false, tab = false }) {
+export function Card({ children, className="" }) {
   return (
-    <div className={styles.card}>
+    <div className={[styles.card, className].join(" ")}>
       {children}
     </div>
   );
 }
 
-export function CardTitle({ children, className=[], center = false }) {
+export function CardTitle({ children, className="", center = false }) {
   return (
-    <div className={[styles.header, center ? styles.center : "" , ...className].join(" ")}>
+    <div className={[styles.header, center ? styles.center : "" , className].join(" ")}>
       {children}
     </div>
   );
