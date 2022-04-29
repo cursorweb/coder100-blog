@@ -1,13 +1,13 @@
-import { Aside } from "../aside";
-import { Nav } from "../nav";
+import { Aside } from "../aside/aside";
+import { Nav } from "../nav/nav";
 
 import styles from "./layout.module.css";
 
 
-export function Layout({ children }) {
+export function Layout({ children, path }) {
   return (
     <>
-      <Nav />
+      <Nav path={path} />
       <main className={styles.flex}>
         <article className={styles.main}>
           {children}

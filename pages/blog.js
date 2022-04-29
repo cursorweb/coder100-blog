@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import { Meta } from "../components/meta";
 
-import { Card, CardTitle } from "../components/card";
+import { Card, CardTitle } from "../components/card/card";
 import { Layout } from "../components/blog/layout";
 
 
@@ -16,7 +16,7 @@ export default function Home({ blogs }) {
     <>
       <Meta title="Coder100's Blog" />
 
-      <Layout>
+      <Layout path="/blog">
         <div className={styles.title}>Coder100&apos;s Blog</div>
         <p>Welcome to my blog! Click around and read my blog posts! I&apos;m an avid coder, youtuber, and a musician. Happy reading!</p>
         {blogs.map(({ url, title, bio, date }, i) => (

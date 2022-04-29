@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { Card, CardTitle } from "./card";
+import { Card, CardTitle } from "../card/card";
 
 import styles from "./aside.module.css";
 
