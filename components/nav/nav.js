@@ -26,10 +26,8 @@ export function Nav({ path = "/" }) {
   return (
     <nav className={styles.nav}>
       {links.map(({ href, src }, i) =>
-        <Link href={href} key={i}>
-          <a className={[styles.link, href == path ? styles.selected : ""].join(" ")}>
-            {src}
-          </a>
+        <Link href={href} key={i} className={[styles.link, href == path ? styles.selected : ""].join(" ")}>
+          {src}
         </Link>
       )}
     </nav>

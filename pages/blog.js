@@ -23,7 +23,7 @@ export default function Home({ blogs }) {
           <Card key={i}>
             <CardTitle>
               <Link href={`/posts/${url}`}>
-                <a>{title}</a>
+                {title}
               </Link>
             </CardTitle>
             <div className={styles.smallSub}>{new Date(date).toDateString()}</div>

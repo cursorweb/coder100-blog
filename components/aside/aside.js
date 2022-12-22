@@ -32,7 +32,7 @@ export function Aside({ className }) {
       {links.map(({ name, link }, i) =>
         <Card key={i} className={styles.customCard}>
           <CardTitle center className={styles.customTitle}>
-            <Link href={link}><a target="_blank" className={styles.noUnderline}>{name}</a></Link>
+            <Link href={link} target="_blank" className={styles.noUnderline}>{name}</Link>
           </CardTitle>
         </Card>
       )}

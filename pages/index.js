@@ -14,12 +14,10 @@ export default function Index() {
         <h1>Coder100</h1>
       </main>
 
-      <Link href="/blog">
-        <a>To Blog</a>
-      </Link>
+      <Link href="/blog">To Blog</Link>
 
       <h2>Projects</h2>
-      <p>For now, check out <Link href="https://coder100s-project-list.coder100.repl.co/"><a target="_blank">this website</a></Link>, until I can get my act together.</p>
+      <p>For now, check out <Link href="https://coder100s-project-list.coder100.repl.co/" target="_blank">this website</Link>, until I can get my act together.</p>
     </>
   );
 }
