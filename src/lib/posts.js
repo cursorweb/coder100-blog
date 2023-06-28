@@ -12,7 +12,7 @@ const converter = new showdown.Converter({
 });
 
 
-const postsDirectory = path.join(process.cwd(), "posts");
+const postsDirectory = path.join(process.cwd(), "src", "posts");
 
 export function getBlogs() {
   const files = fs.readdirSync(postsDirectory);
