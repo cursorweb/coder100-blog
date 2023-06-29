@@ -14,6 +14,14 @@ const converter = new showdown.Converter({
 
 const postsDirectory = path.join(process.cwd(), "src", "posts");
 
+type MatterResult = GrayMatterFile<string> & {
+    data: {
+        title: string,
+        date: number,
+        bio: string
+    }
+}
+
 export interface BlogType {
     title: string,
     date: number,
@@ -29,13 +37,7 @@ export function getBlogs(): BlogType[] {
         const filePath = path.join(postsDirectory, file);
         const fileContents = fs.readFileSync(filePath, "utf8");
 
-        const matterResult = matter(fileContents) as GrayMatterFile<string> & {
-            data: {
-                title: string,
-                date: number,
-                bio: string
-            }
-        };
+        const matterResult = matter(fileContents) as MatterResult;
 
         return {
             url,
@@ -49,13 +51,7 @@ export function getBlogs(): BlogType[] {
 export function getPaths() {
     const files = fs.readdirSync(postsDirectory);
 
-    return files.map(file => {
-        return {
-            params: {
-                title: file.replace(/\.md$/, "")
-            }
-        };
-    });
+    return files.map(file => file.replace(/\.md$/, ""));
 }
 
 export function getBlog(name: string) {
@@ -63,7 +59,7 @@ export function getBlog(name: string) {
     const contents = fs.readFileSync(filePath, "utf8");
 
     // Use gray-matter to parse the post metadata section
-    const matterResult = matter(contents);
+    const matterResult = matter(contents) as MatterResult;
 
     // Use remark to convert markdown into HTML string
     const processedContent = converter.makeHtml(matterResult.content);
@@ -71,7 +67,6 @@ export function getBlog(name: string) {
 
     // Combine the data with the title and contentHtml
     return {
-        title: name,
         html,
         ...matterResult.data
     };

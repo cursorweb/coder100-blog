@@ -6,21 +6,24 @@
         "build": "next build",
         "start": "next start",
         "lint": "next lint",
-        "new": "node util/new-page"
+        "new": "node src/util/new-page"
     },
     "dependencies": {
         "gray-matter": "^4.0.3",
         "next": "^13.4.7",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
-        "showdown": "^2.1.0"
+        "showdown": "^2.1.0",
+        "typescript": "^5.1.6"
     },
     "devDependencies": {
-        "@types/showdown": "^2.0.1",
         "@types/node": "20.3.2",
         "@types/react": "18.2.14",
+        "@types/showdown": "^2.0.1",
         "eslint": "^8.43.0",
         "eslint-config-next": "^13.4.7"
     },
-    "engines": { "node": "18.x" }    
+    "engines": {
+        "node": "18.x"
+    }
 }

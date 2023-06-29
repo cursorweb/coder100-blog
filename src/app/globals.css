@@ -9,8 +9,6 @@
   --secondaryh: #7cc9ff;
 
   --text: #d7ddec;
-
-  --font: 'Noto Sans', monospace;
 }
 
 html, body {
@@ -19,8 +17,6 @@ html, body {
 
   background: var(--background);
   color: var(--text);
-
-  font-family: var(--font);
 
   scroll-behavior: smooth;
 }

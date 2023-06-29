@@ -1,28 +1,31 @@
 import Link from "next/link";
 
-import { Meta } from "../components/meta";
-
-import { Card, CardTitle } from "../components/card/card";
-import { Layout } from "../components/blog/layout";
+import { Card, CardTitle } from "../../components/card/card";
+import { Layout } from "../../components/blog/layout";
 
 
-import { BlogType, getBlogs } from "../lib/posts";
-import styles from "../styles/BlogHome.module.css";
+import { getBlogs } from "../../lib/posts";
+import styles from "./styles.module.css";
 
 
-export default function Home({ blogs }: { blogs: BlogType[] }) {
-    // todo: make this a new component called layout
+export const metadata = {
+    title: "Coder100's Blog",
+    description: "The blog of Coder100",
+};
+
+
+export default function Home() {
+    const blogs = getBlogs();
+
     return (
         <>
-            <Meta title="Coder100's Blog" />
-
             <Layout path="/blog">
                 <div className={styles.title}>Coder100&apos;s Blog</div>
                 <p>Welcome to my blog! Click around and read my blog posts! I&apos;m an avid coder, youtuber, and a musician. Happy reading!</p>
                 {blogs.map(({ url, title, bio, date }, i) => (
                     <Card key={i}>
                         <CardTitle>
-                            <Link href={`/posts/${url}`}>
+                            <Link href={`/blog/${url}`}>
                                 {title}
                             </Link>
                         </CardTitle>
@@ -33,15 +36,4 @@ export default function Home({ blogs }: { blogs: BlogType[] }) {
             </Layout>
         </>
     );
-}
-
-
-export function getStaticProps() {
-    const blogs = getBlogs();
-
-    return {
-        props: {
-            blogs
-        }
-    };
 }

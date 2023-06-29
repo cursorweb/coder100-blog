@@ -1,12 +1,11 @@
 import Link from "next/link";
 
-import { Meta } from "../components/meta";
 import { Nav } from "../components/nav/nav";
 
 import styles from "../styles/Index.module.css";
 
 
-function Section({ children, className = "", ...props }: { children: React.ReactNode, className?: string } & React.ComponentProps<"section">) {
+function Section({ children, className = "", ...props }: { children: React.ReactNode, className?: string } & React.ComponentPropsWithoutRef<"section">) {
     return (
         <section {...props} className={styles.section + " " + className}>
             {children}
@@ -17,7 +16,6 @@ function Section({ children, className = "", ...props }: { children: React.React
 export default function Index() {
     return (
         <>
-            <Meta title="Coder100" />
             <Nav />
 
             <Section id="home">

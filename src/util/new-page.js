@@ -17,5 +17,5 @@ bio:
 
 # ${title}`;
 
-fs.writeFileSync(`posts/${slug}.md`, template);
+fs.writeFileSync(`src/posts/${slug}.md`, template);
 console.log(`Created file at posts/${slug}.md`);
