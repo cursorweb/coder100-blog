@@ -1,10 +1,10 @@
 import Link from "next/link";
 
-import { Card, CardTitle } from "../../components/card/card";
-import { Layout } from "../../components/blog/layout";
+import { Card, CardTitle } from "@/components/card/card";
+import { Layout } from "@/components/blog/layout";
 
 
-import { getBlogs } from "../../lib/posts";
+import { getBlogs } from "@/lib/posts";
 import styles from "./styles.module.css";
 
 

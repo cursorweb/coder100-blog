@@ -1,7 +1,4 @@
 import Link from "next/link";
-
-import { Nav } from "../components/nav/nav";
-
 import styles from "../styles/Index.module.css";
 
 
@@ -16,8 +13,6 @@ function Section({ children, className = "", ...props }: { children: React.React
 export default function Index() {
     return (
         <>
-            <Nav />
-
             <Section id="home">
                 <h1>Coder100</h1>
                 <p>[adjective] Coder</p>

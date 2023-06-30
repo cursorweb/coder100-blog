@@ -1,3 +1,4 @@
+import { Nav } from "@/components/nav/nav";
 import "./globals.css";
 import { Noto_Sans } from "next/font/google";
 
@@ -15,7 +16,10 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-            <body className={noto.className}>{children}</body>
+            <body className={noto.className}>
+                <Nav />
+                {children}
+            </body>
         </html>
     );
 }

@@ -1,7 +1,9 @@
+"use client";
 import Link from "next/link";
 import Image from "next/image";
 
 import styles from "./nav.module.css";
+import { usePathname } from "next/navigation";
 
 const links = [{
     href: "/",
@@ -22,7 +24,8 @@ const links = [{
 }];
 
 
-export function Nav({ path = "/" }) {
+export function Nav() {
+    const path = usePathname();
     return (
         <nav className={styles.nav}>
             {links.map(({ href, src }, i) =>

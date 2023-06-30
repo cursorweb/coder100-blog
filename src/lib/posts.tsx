@@ -48,10 +48,14 @@ export function getBlogs(): BlogType[] {
     return data.sort((a, b) => b.date - a.date);
 }
 
-export function getPaths() {
-    const files = fs.readdirSync(postsDirectory);
+export const paths = getPaths();
 
-    return files.map(file => file.replace(/\.md$/, ""));
+export function getSurroundingBlogs(path: string) {
+    return paths.indexOf(path);
+}
+
+function getPaths() {
+    return getBlogs().map(d => d.url);
 }
 
 export function getBlog(name: string) {
