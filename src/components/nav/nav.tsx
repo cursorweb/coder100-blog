@@ -13,14 +13,15 @@ const links = [{
             src="/cookie.png"
             width="20" height="20"
         />
-    &nbsp;
-    Coder100
+        &nbsp;
+        Coder100
     </>,
 }, {
     href: "/blog",
-    src: <>
-    Blog
-    </>,
+    src: <>Blog</>,
+}, {
+    href: "/tools",
+    src: <>Tools</>
 }];
 
 
